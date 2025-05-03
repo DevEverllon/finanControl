@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinanControl - O seu gestor finançeiro pessoal</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Minhas finanças Pessoais</h1>
+
+      <div class="main">
+        <div class="content">
+          <div class="resumo">
+            <div class="card">
+              <div class="header-resumo saldo-card">
+                <i class="fa-solid fa-chart-simple"></i>
+                <strong>Saldo:</strong>
+              </div>
+
+              <span id="saldo">R$ 0,00</span>
+            </div>
+
+            <div class="card">
+              <div class="header-resumo receita-card">
+                <i class="fa-regular fa-square-caret-up"></i>
+                <strong>Receitas:</strong>
+              </div>
+              <span id="receitas">R$ 0,00</span>
+            </div>
+
+            <div class="card">
+              <div class="header-resumo despesas-card">
+                <i class="fa-solid fa-square-caret-down"></i>
+                <strong>Despesas:</strong>
+              </div>
+              <span id="despesas">R$ 0,00</span>
+            </div>
+          </div>
+
+          <div class="graphic" style="width: 500px">
+            <canvas id="graficoDespesas" width="100" height="200"></canvas>
+          </div>
+        </div>
+
+        <div class="form">
+          <form id="formTransacao">
+            <label for="tipo">Tipo</label>
+            <select id="tipo">
+              <option value="">Selecionee o tipo</option>
+              <option value="receita">Receita</option>
+              <option value="despesa">Despesa</option>
+            </select>
+
+            <label for="valor">Valor</label>
+            <input type="number" id="valor" placeholder="Adcione o valor" />
+
+            <label for="descricao">Descrição</label>
+            <input
+              type="text"
+              id="descricao"
+              placeholder="Descrição"
+              autocomplete="off"
+            />
+
+            <label for="categoria">Categoria</label>
+            <select id="categoria">
+              <option value="">Escolha uma categoria</option>
+              <option value="alimentacao">Alimentação</option>
+              <option value="casa">Casa</option>
+              <option value="educacao">Educação</option>
+              <option value="imposto">Imposto</option>
+              <option value="lazer">Lazer</option>
+              <option value="mercado">Mercado</option>
+              <option value="pets">Pets</option>
+              <option value="saude">Saúde</option>
+              <option value="transporte">Transporte</option>
+              <option value="utilidades">Utilidades</option>
+              <option value="moda">Moda</option>
+              <option value="viagem">Viagem</option>
+              <option value="cuidadosPessoais">Cuidados Pessoais</option>
+              <option value="doacoes">Doações</option>
+              <option value="outros">Outros</option>
+            </select>
+
+            <label for="data">Data</label>
+            <input type="date" id="data" />
+
+            <button type="submit">Adcionar transação</button>
+          </form>
+
+          <h2>Transações</h2>
+
+          <ul id="listaTransacoes"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>
