@@ -57,7 +57,7 @@ Abra o index.html no seu navegador
 Ou copie o link direto no navegador:  
 `https://deveverllon.github.io/finanControl/`
 
-##📌 Melhorias Futuras
+## 📌 Melhorias Futuras
  - Gráficos dinâmicos por período
  - Exportar dados em CSV
  - Armazenamento local com banco de dados
@@ -67,5 +67,5 @@ Ou copie o link direto no navegador:
 Desenvolvido por Éverllon (DevEverllon)
 🔗 deveverllon.github.io
 
-##📝 Licença
+## 📝 Licença
 Este projeto está sob a licença MIT. Sinta-se à vontade para usar, modificar e compartilhar!
